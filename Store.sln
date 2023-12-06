@@ -5,15 +5,17 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store", "Store\Store.csproj", "{20886BAF-FF68-4AE5-A4E7-9F60A2F52BE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Entities", "Store.Entities\Store.Entities.csproj", "{A1C45FB8-5D1D-482A-A95B-F63364EA3949}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Entities", "Store.Entities\Store.Entities.csproj", "{A1C45FB8-5D1D-482A-A95B-F63364EA3949}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Data", "Store.Data\Store.Data.csproj", "{0E8508A8-7BCC-42B5-A279-514F6D92C5A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Data", "Store.Data\Store.Data.csproj", "{0E8508A8-7BCC-42B5-A279-514F6D92C5A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Service.Contract", "Store.Service.Contract\Store.Service.Contract.csproj", "{1B6376E2-F7D7-4E95-B416-5D63256997F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Service.Contract", "Store.Service.Contract\Store.Service.Contract.csproj", "{1B6376E2-F7D7-4E95-B416-5D63256997F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Services", "Store.Service\Store.Services.csproj", "{4AEB3E54-E9DE-449E-8519-40467848789C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Services", "Store.Service\Store.Services.csproj", "{4AEB3E54-E9DE-449E-8519-40467848789C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Dto", "Store.Dto\Store.Dto.csproj", "{88C45697-1FDE-4DA1-8CDE-8C674EEEB0EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Dto", "Store.Dto\Store.Dto.csproj", "{88C45697-1FDE-4DA1-8CDE-8C674EEEB0EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Web", "Store.Web\Store.Web.csproj", "{C867CB35-F9C8-4A67-9FCE-CFA02DF551E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{88C45697-1FDE-4DA1-8CDE-8C674EEEB0EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88C45697-1FDE-4DA1-8CDE-8C674EEEB0EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88C45697-1FDE-4DA1-8CDE-8C674EEEB0EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C867CB35-F9C8-4A67-9FCE-CFA02DF551E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C867CB35-F9C8-4A67-9FCE-CFA02DF551E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C867CB35-F9C8-4A67-9FCE-CFA02DF551E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C867CB35-F9C8-4A67-9FCE-CFA02DF551E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
