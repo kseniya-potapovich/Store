@@ -25,7 +25,7 @@ namespace Store.Web.Services
 
         public async Task<List<ProductDto>> GetAll()
         {
-            var response = await _httpClient.GetFromJsonAsync<List<ProductDto>>($"Products");
+            var response = await _httpClient.GetFromJsonAsync<List<ProductDto>>($"Product");
             return response ?? throw new HttpRequestException("Couldn't get vessels");
         }
 

@@ -1,37 +1,40 @@
 ﻿@page "/products"
-@using Store.Dto;
-@using Store.Service.Contract;
+    @using Store.Dto;
+    @using Store.Service.Contract;
 
-@inject IProductService _productService
+    @inject IProductService _productService
 
 <PageTitle>Product</PageTitle>
 
+<button class="btn btn-primary" @onclick="OnEvaluateCLick">Click me</button>
 <MudTable Items="@products">
     <HeaderContent>
         <MudTh>Name</MudTh>
-        <MudTh>Category</MudTh>
+                    <MudTh>Category</MudTh>
         <MudTh>Price</MudTh>
-        <MudTh>Actions</MudTh>
+        <MudTh>Actions</MudTh> 
     </HeaderContent>
     <RowTemplate>
-        <MudTd DataLable = "Name">@context.Name</MudTd>
-        <MudTd DataLabel="Category">@context.Category</MudTd>
-        <MudTd DataLabel="Price">@context.Price</MudTd>
-        <MudTd DataLabel="Actions"><MudButton OnClick="OnEvaluateCLick" Variant="Variant.Filled" Color="Color.Primary">Evaluate></MudButton></MudTd>
-    </RowTemplate>
-</MudTable>
+        <MudTd DataLable="Name">@context.Id</MudTd>
+            <MudTd DataLabel="Category">@context.Category</MudTd> 
+             <MudTd DataLabel="Price">@context.Price</MudTd> 
+                <MudTd DataLabel="Actions"><MudButton OnClick="OnEvaluateCLick" Variant="Variant.Filled" Color="Color.Primary">Evaluate></MudButton></MudTd>
+        </RowTemplate>
+    </MudTable>
 
 
-@code
-{
+    @code
+    {
     private List<ProductDto>? products;
+
     protected async override Task OnInitializedAsync()
     {
         products = await _productService.GetAll();
     }
 
-    private void OnEvaluateCLick()
+    private async Task OnEvaluateCLick()
     {
-
+        Console.WriteLine("!!!!!");
+        products = await _productService.GetAll();
     }
-}
+    }
