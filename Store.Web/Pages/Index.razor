@@ -6,19 +6,19 @@
 
 <PageTitle>Product</PageTitle>
 
-<button class="btn btn-primary" @onclick="OnEvaluateCLick">Click me</button>
+@* <button class="btn btn-primary" @onclick="OnEvaluateCLick">Click me</button>*@
 <MudTable Items="@products">
     <HeaderContent>
         <MudTh>Name</MudTh>
-                    <MudTh>Category</MudTh>
+        <MudTh>Category</MudTh>
         <MudTh>Price</MudTh>
         <MudTh>Actions</MudTh> 
     </HeaderContent>
     <RowTemplate>
-        <MudTd DataLable="Name">@context.Id</MudTd>
+        <MudTd DataLable="Name">@context.Name</MudTd>
             <MudTd DataLabel="Category">@context.Category</MudTd> 
-             <MudTd DataLabel="Price">@context.Price</MudTd> 
-                <MudTd DataLabel="Actions"><MudButton OnClick="OnEvaluateCLick" Variant="Variant.Filled" Color="Color.Primary">Evaluate></MudButton></MudTd>
+             <MudTd DataLabel="Price">@context.Price</MudTd>
+            <MudFab Color="Color.Tertiary" StartIcon="@Icons.Material.Filled.ShoppingCart" DisableElevation="true" />
         </RowTemplate>
     </MudTable>
 

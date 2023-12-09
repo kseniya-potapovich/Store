@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace Store.Dto
 {
-    public class CreateProductDto
+    public class CreateCartItemDto
     {
-        public string Name { get; set; }
+        public int userId { get; set; }
 
-        public string Category { get; set; }
-
-        public double Price { get; set; }
+        public int productId { get; set; }
 
         public int Quantity { get; set; }
     }
