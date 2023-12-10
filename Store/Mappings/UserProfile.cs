@@ -10,6 +10,7 @@ namespace Store.Mappings
         { 
             CreateMap<User, UserDto>().ReverseMap();
             CreateMap<User, CreateUserDto>().ReverseMap();
+            CreateMap<LoginDto, LoginDto>().ReverseMap();
         }
     }
 }

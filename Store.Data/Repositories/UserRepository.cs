@@ -4,8 +4,10 @@ using Store.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Http;
 
 namespace Store.Data.Repositories
 {
@@ -47,8 +49,14 @@ namespace Store.Data.Repositories
 
         public async Task<User> GetByLoginAndPassword(string login, string password)
         {
-            return await _context.Users.FirstAsync(c => c.Login == login && c.Password == password);
+
+           var user = await _context.Users.FirstOrDefaultAsync(c => c.Login == login && c.Password == password);
             //обработка когда не совпали логин и пароль
+           /* if(user == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.Unauthorized);
+            }*/
+            return user;
         }
     }
 }

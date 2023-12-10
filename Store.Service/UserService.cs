@@ -42,5 +42,12 @@ namespace Store.Services
             var clientToFind = await _clientRepository.GetById(id);
             return _mapper.Map<UserDto>(clientToFind);
         }
+
+        public async Task<UserDto> Login(LoginDto loginDto)
+        {
+            var user = await _clientRepository.GetByLoginAndPassword(loginDto.UserName, loginDto.Password);
+            return _mapper.Map<UserDto>(user);
+
+        }
     }
 }

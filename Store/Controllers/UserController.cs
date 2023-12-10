@@ -21,6 +21,13 @@ namespace Store.Controllers
         {
             return await _clientService.GetById(id);
         }
+        [HttpPost("login")]
+        public async Task<ActionResult<UserDto>> GetByLoginAndPassword(LoginDto login)
+        {
+            return await _clientService.Login(login);
+        }
+
+       
 
         [HttpPost]
         public async Task<ActionResult<int>> CreateClient([FromBody] UserDto client)

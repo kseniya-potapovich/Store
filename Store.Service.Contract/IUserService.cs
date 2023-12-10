@@ -12,5 +12,6 @@ namespace Store.Service.Contract
         public Task<int> CreateClient(UserDto client);
         public Task<UserDto> DeleteClient(int id);
         public Task<UserDto> GetById(int id);
+        public Task<UserDto> Login(LoginDto loginDto);
     }
 }
